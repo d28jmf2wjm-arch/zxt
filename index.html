@@ -352,15 +352,15 @@
     };
 
     const physics = {
-      gravity: 0.46,
-      maxFall: 11.4,
-      runAccel: 0.5,
-      airAccel: 0.28,
-      friction: 0.78,
-      topSpeed: 2.7,
-      jumpPower: -10.2,
-      coyoteFrames: 10,
-      jumpBufferFrames: 12,
+      gravity: 0.38,
+      maxFall: 12.8,
+      runAccel: 0.58,
+      airAccel: 0.34,
+      friction: 0.8,
+      topSpeed: 3.9,
+      jumpPower: -15.8,
+      coyoteFrames: 16,
+      jumpBufferFrames: 20,
     };
 
     function clamp(value, min, max) {
@@ -1041,7 +1041,7 @@
           player.coyote = physics.coyoteFrames;
           player.standingOn = platform;
           if (platform.kind === "pulse" && player.prevVy > 1.1) {
-            player.vy = -11.4;
+            player.vy = -18.2;
             player.onGround = false;
             player.standingOn = null;
             AudioSystem.pulse();
